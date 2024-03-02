@@ -1,11 +1,26 @@
-.idea/
-.phpcd/
-tags
-.vscode/
-data/
-node_modules/
-vendor/
-venv/
-__pycache__/
+ .DS_STORE
+.idea
+.vscode
+vendor
+/node_modules
+/.pnp
+.pnp.js
+/target
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# misc
 .env
-oops.md
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
