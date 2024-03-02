@@ -1,0 +1,11 @@
+.idea/
+.phpcd/
+tags
+.vscode/
+data/
+node_modules/
+vendor/
+venv/
+__pycache__/
+.env
+oops.md

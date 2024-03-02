@@ -1,0 +1,69 @@
+[user]
+	email = 95189430+tolu0x@users.noreply.github.com
+	name = Toluwalase Adams
+	signingkey = EC2D1D3E91B21A03
+
+[github]
+  user = tolu0x
+
+[push]
+	default = current
+
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	quotepath = false
+	commitGraph = true
+	autocrlf = input
+	safecrlf = false
+
+[alias]
+	prune = "fetch --prune"
+        authors = "!git shortlog -s | cut -c8-"
+	; bclean clears up all local branches leaving only the current active branch.
+	; Say you have 5 branches (including master), then you checkout the fiend branch.
+	; Running git bclean would delete the other 4 branches, leaving only the fiend branch.
+	; Run this with caution.
+	bclean = "!git branch | ack --match='  ' | sed 's/^[ *]*//' | sed 's/^/git branch -D /' | zsh"
+	fiend = "!git branch fiend && git checkout fiend"
+	lg = log --color --graph --abbrev-commit\n           --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+
+[color]
+	ui = true
+
+[color "diff-highlight"]
+ 	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[commit]
+	gpgsign = true
+
+[tag]
+	forceSignAnnotated = true
+
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+	insteadOf = https://github.com/
+
+[gc]
+	writeCommitGraph = true
+
+[receive]
+	advertisePushOptions = true
+
+[gpg]
+	program = gpg
